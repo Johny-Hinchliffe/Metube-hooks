@@ -2,10 +2,10 @@ import React from 'react'
 
 const VideoDetail = ({ video }) => {
 	if (!video) {
-		console.log('no video')
 		return <div>Loading...</div>
 	}
 	const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`
+
 	return (
 		<div>
 			<div className="ui embed">
@@ -15,6 +15,8 @@ const VideoDetail = ({ video }) => {
 					height="315"
 					src={videoSrc}
 					frameBorder="0"
+					allow="accelerometer;
+                    autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 					allowFullScreen
 				></iframe>
 			</div>
